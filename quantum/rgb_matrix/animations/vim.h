@@ -5,15 +5,29 @@ bool VIM(effect_params_t* params) {
     RGB_MATRIX_USE_LIMITS(led_min, led_max);
 
     RGB rgb = rgb_matrix_hsv_to_rgb(rgb_matrix_config.hsv);
-    if (params->init) {
-        rgb_matrix_set_color_all(rgb.r, rgb.g, rgb.b);
-        memset(g_rgb_frame_buffer, 0, sizeof g_rgb_frame_buffer);
+    for (uint8_t i = led_min; i < led_max; i++) {
+        // if ( i == led_min + 50 ) {
+        //     RGB_MATRIX_TEST_LED_FLAGS();
+        //     rgb_matrix_set_color(i, 255, 255, 255);
+        // }
+        RGB_MATRIX_TEST_LED_FLAGS();
+        rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
     }
-    RGB rgb_vim = rgb_matrix_hsv_to_rgb(rgb_matrix_config.hsv_vim);
-    rgb_matrix_set_color(g_led_config.matrix_co[3][6], rgb_vim.r, rgb_vim.g, rgb_vim.b);
-    rgb_matrix_set_color(g_led_config.matrix_co[3][7], rgb_vim.r, rgb_vim.g, rgb_vim.b);
-    rgb_matrix_set_color(g_led_config.matrix_co[3][8], rgb_vim.r, rgb_vim.g, rgb_vim.b);
-    rgb_matrix_set_color(g_led_config.matrix_co[3][9], rgb_vim.r, rgb_vim.g, rgb_vim.b);
+
+    // uint8_t vim_offset = 67;
+    // uint8_t letter_h = vim_offset + led_min;
+    // uint8_t letter_i = vim_offset + led_min + 1;
+    // uint8_t letter_j = vim_offset + led_min + 2;
+    // uint8_t letter_k = vim_offset + led_min + 3;
+
+    // RGB_MATRIX_TEST_LED_FLAGS();
+    // rgb_matrix_set_color(letter_h, 0, 0, 0);
+    // RGB_MATRIX_TEST_LED_FLAGS();
+    // rgb_matrix_set_color(letter_i, 0, 0, 0);
+    // RGB_MATRIX_TEST_LED_FLAGS();
+    // rgb_matrix_set_color(letter_j, 0, 0, 0);
+    // RGB_MATRIX_TEST_LED_FLAGS();
+    // rgb_matrix_set_color(letter_k, 0, 0, 0);
     return rgb_matrix_check_finished_leds(led_max);
 }
 
