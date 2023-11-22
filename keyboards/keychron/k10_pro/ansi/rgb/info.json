@@ -29,7 +29,8 @@
             "solid_reactive_multiwide": true,
             "solid_reactive_multinexus": true,
             "splash": true,
-            "solid_splash": true
+            "solid_splash": true,
+            "vim": true
         },
         "layout": [
             {"matrix":[0,0],  "flags":1, "x":0,   "y":0},
