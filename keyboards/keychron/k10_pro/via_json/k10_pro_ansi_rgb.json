@@ -24,27 +24,7 @@
                 ["None", 0],
                 ["Solid Color", 1],
                 ["VIM", 2],
-                ["Breathing", 3],
-                ["Band Spiral Val", 4],
-                ["Cycle All", 5],
-                ["Cycle Left Right", 6],
-                ["Cycle Up Down", 7],
-                ["Rainbow Moving Chevron", 8],
-                ["Cycle Out In", 9],
-                ["Cycle Out In Dual", 10],
-                ["Cycle Pinwheel", 11],
-                ["Cycle Spiral", 12],
-                ["Dual Beacon", 13],
-                ["Rainbow Beacon", 14],
-                ["Jellybean Raindrops", 15],
-                ["Pixel Rain", 16],
-                ["Typing Heatmap", 17],
-                ["Digital Rain", 18],
-                ["Reactive Simple", 19],
-                ["Reactive Multiwide", 20],
-                ["Reactive Multinexus", 21],
-                ["Splash", 22],
-                ["Solid Splash", 23]
+                ["Typing Heatmap", 3]
               ]
             },
             {
@@ -59,6 +39,12 @@
               "label": "Color",
               "type": "color",
               "content": ["id_qmk_rgb_matrix_color", 3, 4]
+            },
+{
+              "showIf": "{id_qmk_rgb_matrix_effect} != 0 && ( {id_qmk_rgb_matrix_effect} < 4 || {id_qmk_rgb_matrix_effect} == 18 || ({id_qmk_rgb_matrix_effect} > 17 && {id_qmk_rgb_matrix_effect} != 21) ) ",
+              "label": "Color_vim",
+              "type": "color_vim",
+              "content": ["id_qmk_rgb_matrix_color_vim", 3, 4]
             }
           ]
         }
