@@ -25,13 +25,12 @@
             "jellybean_raindrops": false,
             "pixel_rain": false,
             "typing_heatmap": true,
-            "digital_rain": true,
-            "solid_reactive_simple": true,
-            "solid_reactive_multiwide": true,
-            "solid_reactive_multinexus": true,
-            "splash": true,
-            "solid_splash": true,
-            "vim": true
+            "digital_rain": false,
+            "solid_reactive_simple": false,
+            "solid_reactive_multiwide": false,
+            "solid_reactive_multinexus": false,
+            "splash": false,
+            "solid_splash": false
         },
         "layout": [
             {"matrix":[0,0],  "flags":1, "x":0,   "y":0},
