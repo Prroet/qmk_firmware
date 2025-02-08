@@ -106,5 +106,12 @@ compile_commands.json
 .clangd/
 .cache/
 
+# ccls
+.ccls-cache/
+
 # VIA(L) json files that don't belong in QMK repo
 via*.json
+
+# direnv
+.envrc
+.direnv/
