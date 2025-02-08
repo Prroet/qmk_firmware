@@ -223,7 +223,7 @@ static void ckbt51_param_init(void) {
                             .reconnect_timeout      = 5,
                             .report_rate            = 90,
                             .vendor_id_source       = 1,
-                            .verndor_id             = 0, // Must be 0x3434
+                            .vendor_id              = VENDOR_ID, // Keychron 0x3434 specified in info.json
                             .product_id             = PRODUCT_ID};
     ckbt51_set_param(&param);
 }
@@ -251,7 +251,7 @@ void ckbt51_default_ack_handler(uint8_t *data, uint8_t len) {
                                 .reconnect_timeout      = 5,
                                 .report_rate            = 90,
                                 .vendor_id_source       = 1,
-                                .verndor_id             = 0, // Must be 0x3434
+                                .vendor_id              = VENDOR_ID, // Keychron 0x3434 specified in info.json
                                 .product_id             = PRODUCT_ID};
         ckbt51_set_param(&param);
     }
